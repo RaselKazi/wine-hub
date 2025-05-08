@@ -1,6 +1,6 @@
 import { Roboto_Mono } from "next/font/google";
 import type { Metadata } from "next";
-import localFont from "next/font/local";
+// import localFont from "next/font/local";
 import "./globals.css";
 import BackToTopButton from "@/components/layout/BackToTopButton";
 import Header from "@/components/layout/Header";
@@ -11,21 +11,21 @@ const roboto_mono = Roboto_Mono({
   display: "swap",
   variable: "--font-roboto-mono",
 });
-const epilogue = localFont({
-  src: "./fonts/Epilogue-Black.ttf",
-  variable: "--font-epilogue-sans",
-  weight: "100 900",
-});
-const Fredoka = localFont({
-  src: "./fonts/Fredoka-Font.ttf",
-  variable: "--font-fredoka-sans",
-  weight: "100 900",
-});
-const JosefinSans = localFont({
-  src: "./fonts/JosefinSans.ttf",
-  variable: "--font-josef-sans",
-  weight: "100 900",
-});
+// const epilogue = localFont({
+//   src: "./fonts/Epilogue-Black.ttf",
+//   variable: "--font-epilogue-sans",
+//   weight: "100 900",
+// });
+// const Fredoka = localFont({
+//   src: "./fonts/Fredoka-Font.ttf",
+//   variable: "--font-fredoka-sans",
+//   weight: "100 900",
+// });
+// const JosefinSans = localFont({
+//   src: "./fonts/JosefinSans.ttf",
+//   variable: "--font-josef-sans",
+//   weight: "100 900",
+// });
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -39,9 +39,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${roboto_mono.variable} ${epilogue.variable} ${JosefinSans.variable} ${Fredoka.variable}  antialiased `}
-      >
+      <body className={`${roboto_mono.variable}   antialiased `}>
         {" "}
         <Header />
         <main className="  w-full overflow-x-clip">{children}</main>

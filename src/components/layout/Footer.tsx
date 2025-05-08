@@ -2,22 +2,14 @@
 import React from "react";
 import { motion } from "motion/react";
 import Image from "next/image";
-import footerIllustration from "@/assets/images/footer-illustration.png";
-import deliveryBoy from "@/assets/images/delivery-boy.svg";
-import shapeWhite from "@/assets/shape/shape-white.png";
+
 import { Facebook, Instagram, Twitter } from "lucide-react";
 
 const Footer: React.FC = () => {
   return (
     <footer className="   bg-white overflow-hidden ">
-      <div
-        className="relative bg-cover bg-center bg-no-repeat border-b-4 border-gray-400 w-full"
-        style={{ backgroundImage: `url(${footerIllustration.src})` }}
-      >
-        <div
-          className=" absolute top-0 left-0 w-full object-cover"
-          style={{ backgroundImage: `url(${shapeWhite.src})` }}
-        ></div>
+      <div className="relative bg-cover bg-center bg-no-repeat border-b-4 border-gray-400 w-full">
+        <div className=" absolute top-0 left-0 w-full object-cover"></div>
         <div className="container grid md:grid-cols-2 lg:grid-cols-3 gap-8 mx-auto py-32">
           <div className="footer-brand">
             <a href="#" className=" text-4xl  text-black  ">
@@ -81,21 +73,6 @@ const Footer: React.FC = () => {
             </li>
           </ul>
         </div>
-        <motion.div
-          initial={{ x: "0%" }}
-          animate={{ x: "100%" }}
-          transition={{ repeat: Infinity, repeatType: "loop", duration: 20 }}
-          className="absolute bottom-0 left-0 w-full"
-        >
-          <Image
-            src={deliveryBoy.src}
-            alt="Delivery Boy"
-            loading="lazy"
-            width={100}
-            height={100}
-            className=""
-          />
-        </motion.div>
       </div>
 
       <div className=" py-6 text-center">
