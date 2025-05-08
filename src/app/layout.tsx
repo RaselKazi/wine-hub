@@ -1,15 +1,30 @@
+import { Roboto_Mono } from "next/font/google";
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
+import BackToTopButton from "@/components/layout/BackToTopButton";
+import Header from "@/components/layout/Header";
+import Footer from "@/components/layout/Footer";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const roboto_mono = Roboto_Mono({
   subsets: ["latin"],
+  display: "swap",
+  variable: "--font-roboto-mono",
 });
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+const epilogue = localFont({
+  src: "./fonts/Epilogue-Black.ttf",
+  variable: "--font-epilogue-sans",
+  weight: "100 900",
+});
+const Fredoka = localFont({
+  src: "./fonts/Fredoka-Font.ttf",
+  variable: "--font-fredoka-sans",
+  weight: "100 900",
+});
+const JosefinSans = localFont({
+  src: "./fonts/JosefinSans.ttf",
+  variable: "--font-josef-sans",
+  weight: "100 900",
 });
 
 export const metadata: Metadata = {
@@ -25,9 +40,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${roboto_mono.variable} ${epilogue.variable} ${JosefinSans.variable} ${Fredoka.variable}  antialiased `}
       >
-        {children}
+        {" "}
+        <Header />
+        <main className="  w-full overflow-x-clip">{children}</main>
+        <Footer />
+        <BackToTopButton />
       </body>
     </html>
   );
