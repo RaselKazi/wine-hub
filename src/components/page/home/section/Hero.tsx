@@ -1,22 +1,69 @@
 "use client";
 
-import ContainerWrapper from "@/components/ui/container-wrapper";
+import { AnimatedTestimonials } from "@/components/ui/animated-testimonials";
 
 interface HeroProps {
   autoplay?: boolean;
 }
 
+const testimonials = [
+  {
+    name: "Sarah Chen",
+    designation: "Product Manager at TechFlow",
+    src: "/images/product-11.png",
+  },
+  {
+    name: "Michael Rodriguez",
+    designation: "CTO at InnovateSphere",
+    src: "/images/product-2.png",
+  },
+  {
+    name: "Emily Watson",
+    designation: "Operations Director at CloudScale",
+    src: "/images/product-3.png",
+  },
+  {
+    name: "James Kim",
+    designation: "Engineering Lead at DataPro",
+    src: "/images/product-4.png",
+  },
+  {
+    name: "Lisa Thompson",
+    designation: "VP of Technology at FutureNet",
+    src: "/images/product-5.png",
+  },
+  {
+    name: "Lisa Thompson",
+    designation: "VP of Technology at FutureNet",
+    src: "/images/product-6.png",
+  },
+  {
+    name: "Lisa Thompson",
+    designation: "VP of Technology at FutureNet",
+    src: "/images/product-7.png",
+  },
+  {
+    name: "Lisa Thompson",
+    designation: "VP of Technology at FutureNet",
+    src: "/images/product-8.png",
+  },
+  {
+    name: "Lisa Thompson",
+    designation: "VP of Technology at FutureNet",
+    src: "/images/product-9.png",
+  },
+  {
+    name: "Lisa Thompson",
+    designation: "VP of Technology at FutureNet",
+    src: "/images/product-12.png",
+  },
+];
 // Main Component
 const Hero: React.FC<HeroProps> = () => {
   return (
-    <ContainerWrapper>
-      <section
-        id="home"
-        className="relative w-full overflow-hidden bg-rose-700 rounded-2xl mt-20 my-4 md:h-screen"
-      >
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 p-6"></div>
-      </section>
-    </ContainerWrapper>
+    <section id="home" className="">
+      <AnimatedTestimonials testimonials={testimonials} />
+    </section>
   );
 };
 

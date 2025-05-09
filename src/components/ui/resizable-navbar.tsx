@@ -6,6 +6,7 @@ import {
   useScroll,
   useMotionValueEvent,
 } from "motion/react";
+import Image from "next/image";
 import Link from "next/link";
 
 import React, { useRef, useState } from "react";
@@ -253,11 +254,20 @@ export const MobileNavToggle = ({
 
 export const NavbarLogo = () => {
   return (
-    <a
-      href="#"
-      className="relative z-20 mr-4 flex items-center space-x-2 px-2 py-1 text-sm font-normal text-black"
-    >
-      <span className="font-medium text-black dark:text-white">Startup</span>
-    </a>
+    <div className="flex items-center gap-1">
+      <Image
+        src="/images/product-11.png"
+        alt="WineHub Logo"
+        width={48}
+        height={48}
+        className="w-5 h-auto"
+      />
+      <div className=" mt-3">
+        <h1 className="text-md leading-3 text-slate-900 font-bold uppercase">
+          WineHub
+        </h1>
+        <p className="text-slate-500 text-xs">Since 1940</p>
+      </div>
+    </div>
   );
 };
