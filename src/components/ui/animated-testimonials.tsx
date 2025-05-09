@@ -64,10 +64,10 @@ export const AnimatedTestimonials = ({
   return (
     <div className="relative w-full h-screen overflow-hidden  px-4 pt-14">
       <Image
-        src="/background/grey-gradient-background.jpg"
+        src="/images/background/grey-gradient-background2.jpg"
         alt="Wine"
         fill
-        className=" object-cover"
+        className=" object-top object-fill"
         draggable={false}
       />
       {/* Background ambient light */}
@@ -104,16 +104,14 @@ export const AnimatedTestimonials = ({
                   />
 
                   {/* Reflection with CSS gradient mask */}
-                  <div className="absolute top-full w-full h-full scale-y-[-1] opacity-40 pointer-events-none">
+                  <div className="absolute top-full w-full h-full scale-y-[-1] opacity-10 pointer-events-none">
                     <Image
                       src={testimonial.src}
                       alt="reflection"
                       fill
-                      className="object-contain object-center px-12"
+                      className="object-contain object-center px-12 bg-bottom"
                       draggable={false}
                     />
-                    {/* Gradient mask overlay */}
-                    <div className="absolute inset-0 bg-gradient-to-t to-slate-200 to-30% from-transparent mx-20" />
                   </div>
                 </div>
               </motion.div>

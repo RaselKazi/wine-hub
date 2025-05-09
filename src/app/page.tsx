@@ -1,3 +1,4 @@
+import Blog from "@/components/page/home/section/Blog";
 import CustomProducts from "@/components/page/home/section/CustomProducts";
 import Hero from "@/components/page/home/section/Hero";
 import WineMaking from "@/components/page/home/section/WineMaking";
@@ -10,6 +11,7 @@ export default function Home() {
       <CustomProducts />
       <WinesProducts />
       <WineMaking />
+      <Blog />
     </div>
   );
 }
